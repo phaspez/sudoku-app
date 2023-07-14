@@ -1,4 +1,4 @@
-import { solvePuzzle } from "./node_modules/sudoku/dist-web/index.js";
+import { solvePuzzle } from "./pk/sudoku/dist-web/index.js";
 
 
 let difficulty = {
