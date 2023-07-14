@@ -10,6 +10,7 @@ let difficulty = {
 }
 
 
+
 let solution;
 let board;
 
