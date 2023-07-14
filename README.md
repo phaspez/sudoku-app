@@ -6,3 +6,4 @@ i mainly working on game development but anyways here's a web sudoku.
 - html/css/js
 - bootstrap
 
+https://phaspez.github.io/sudoku-app/
