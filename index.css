@@ -1,0 +1,155 @@
+.vl {
+    display: flex;
+    border: 6px solid black;
+    height: auto;
+    width: 6px;
+}
+
+.game_container{
+    display: block;
+}
+
+hr {
+    width: 100%;
+    align-self: center;
+}
+
+#board {
+    width: 450px; /* both were 450px */
+    height: 450px;
+    display: grid;
+    grid-template-columns: auto auto auto auto auto auto auto auto auto;
+    gap: 0px 0px;
+    margin: 0px auto;
+
+    flex-wrap: wrap; /* wtf is this */
+}
+
+#digits {
+    width: 450px;
+    height: 50px;
+
+
+    margin: 0 auto;
+
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+.tile {
+    width: 50px;
+    height: 50px;
+    border: 1px solid grey;
+
+    font-size: 25px;
+    font-weight: bold;
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    animation: unselected 0.3;
+}
+
+.number {
+    width: 44px;
+    height: 44px;
+    border: 1px solid white;
+
+    margin: 2px;
+
+    font-size: 20px;
+    font-weight: bold;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.number:not(:focus){
+    animation: unselected 0.3;
+}
+
+body {
+    text-align: center;
+}
+
+@keyframes selected {
+    from {background-color: white; color: black; border-width: 1px;border-radius: 0px;}
+    to {background-color: gray; color: white; border-width: 4px;border-radius: 10px;}
+}
+
+@keyframes unselected {
+    from {background-color: gray; color: white; border-width: 4px;border-radius: 10px;}
+    to {background-color: white; color: black; border-width: 1px;border-radius: 0px;}
+}
+
+@keyframes false-answer {
+    from {background-color: rgba(54, 158, 255, 0.5); width: 80px; height: 80px;}
+    to {background-color: rgba(177, 29, 29, 0.637); width: 100px; height: 100px}
+}
+
+
+.on_number_selected {
+    background-color: gray;
+    color: white;
+    animation-name: selected;
+    animation-timing-function:cubic-bezier(0.55, 0.055, 0.675, 0.19);
+    animation-duration: 0.3s;
+    border-width: 4px;
+    border-radius: 10px;
+}
+
+
+.hint_tile {
+    background-color: rgb(87, 87, 87);
+}
+
+.tile_border_bottom {
+    border-bottom: 3px solid white;
+}
+
+.tile_border_right {
+    border-right: 3px solid white;
+}
+
+.horizontal-container {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-items: center; 
+}
+
+#detail-box {
+    display: inline-block;
+    margin: auto;
+    padding: 10px 0;
+}
+
+#detail-box > div {
+    margin: 10px 0;
+}
+
+.color-theme {
+    background-color: navy;
+}
+
+#overlay {
+    position: absolute;
+    display: none;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    background-color: rgba(54, 158, 255, 0.5);
+    mix-blend-mode: lighten ;
+    pointer-events: none;
+  }
+
+.vertical-container {
+    display: inline;
+    padding: 0px auto;
+    margin: 0px auto;
+    align-items: center;
+}
